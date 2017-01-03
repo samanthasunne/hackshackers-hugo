@@ -9,20 +9,17 @@
 
     <div class="right-column">
       <h2 class="single-headline">{{ .Title }}</h2>
-
-      {{ if eq .Type "blog" }}
-        {{ partial "meta-single.html" . }}
+      {{ if and (eq .Data.Singular "author") ( .Site.Data.authors ) }}
+        {{ if (index .Site.Data.authors (.Title | urlize)) }}
+          {{ partial "meta-author.html" . }}
+        {{ end }}
       {{ end }}
 
-      {{ if isset .Params "sectionfront" }}
-        {{ partial (printf "section-fronts/%s.html" .Section) . }}
-      {{ end }}
-
-      {{ partial "utils/suggest-edits.html" . }}
-
-      <article class="single-article">
-        {{ .Content }}
-      </article>
+      <section class="content-list">
+        {{ range .Data.Pages }}
+          {{ .Render "archive"}}
+        {{ end }}
+      </section>
     </div>
   </div>
 </div>

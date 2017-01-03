@@ -1,8 +1,0 @@
-baseurl = "https://hackshackers.com/"
-enableEmoji = true
-ignoreFiles = [ "README\\.md$" ]
-languageCode = "en-us"
-title = "Hacks/Hackers"
-theme = "hackshackers-2017"
-disableRSS = true
-disableSitemap = true

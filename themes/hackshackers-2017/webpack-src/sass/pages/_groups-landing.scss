@@ -1,0 +1,87 @@
+.local-groups {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.local-groups-city {
+	margin-bottom: 45px;
+	padding: 0px 45px;
+
+	button {
+		margin: 5px 0 0 0;
+	}
+}
+
+.local-groups-city-box {
+	color: $color-black;
+}
+
+.local-groups-city-title {
+	font: $font-primary-nav;
+	font-size: 32px;
+	text-transform: uppercase;
+	border-bottom: 3px solid $color-black;
+	display: inline-block;
+	margin-bottom: 5px;
+
+	&:hover {
+		color: $color-orange;
+	}
+}
+
+.groups-archive-wrapper {
+	border-bottom: $border-primary;
+	margin-bottom: 55px;
+	padding-bottom: $spacer-small;
+
+	h3 {
+		font: $font-single-subheader;
+	}
+
+	h4 {
+		color: $color-orange;
+		font-size: 22px;
+		font-weight: 700;
+		text-decoration: underline;
+
+		@media #{$breakpoint-tablet-min} {
+			margin-left: $spacer-gutter;
+		}
+
+		&:hover {
+			color: $color-blue-water;
+		}
+	}
+}
+
+.groups-archive-top {
+	align-items: baseline;
+	display: flex;
+
+	@media #{$breakpoint-mobile} {
+		flex-direction: column;
+	}
+}
+
+.group-header-small {
+	font-weight: 700;
+
+	span {
+		font-weight: 400;
+	}
+}
+
+.external-group-page {
+	position: relative;
+
+	.local-groups-city-title {
+		&:after {
+			content: "\f08e";
+			display: inline-block;
+    	font: normal normal normal 14px/1 FontAwesome;
+			position: absolute;
+			margin-left: 6px;
+			top: 9px;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+<div class="local-groups-wrapper">
+	<ul class="local-groups groups">
+		{{ range .Site.Data.groups }}
+			{{ partial "group-city.html" . }}
+		{{ end }}
+	</ul>
+</div>
