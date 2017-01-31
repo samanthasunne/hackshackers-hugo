@@ -1,19 +1,15 @@
-{{ partial "header.html" }}
-{{ partial "nav.html" }}
+{{ partial "header.html" .Site }}
+{{ partial "nav.html" . }}
 
 <div class="home-wrapper">
 	{{ partial "map.html" . }}
-	{{ partial "slogan.html" }}
+	{{ partial "statement.html" (dict "title" .Title "subtitle" .Params.subtitle) }}
 	{{ partial "home-upcoming-events.html" }}
-	{{ partial "home-newsletter-signup.html" }}
-
-	<div class="section-bg-black">
-		<div class="section-wrapper container">
+	<div class="home-resource-signup-wrapper">
+		<div class="container">
 			{{ partial "home-resources.html" }}
-			{{ partial "home-featured-organizers.html" }}
-		</div>
+			{{ partial "home-signup.html" }}
 	</div>
-
 </div>
 
-{{ partial "footer.html" }}
+{{ partial "footer.html" . }}

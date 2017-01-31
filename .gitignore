@@ -4,3 +4,5 @@ npm-debug.log
 public
 .wercker
 lunr-index.json
+styles.js
+styles.js.map

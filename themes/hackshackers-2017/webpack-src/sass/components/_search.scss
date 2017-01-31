@@ -36,12 +36,12 @@
 	left: 0;
 	opacity: 0;
 	padding: 45px 0 0 0;
-	position: absolute;
+	position: fixed;
 	top: 65px;
-	transition: 0.2s;
+	transition: 0.5s opacity ease;
 	visibility: hidden;
 	width: 100%;
-	z-index: 999;
+	z-index: 9999;
 
 	&.show {
 		opacity: 1;
@@ -69,4 +69,32 @@
 .search-query {
 	font: $font-widget-heading;
 	text-transform: capitalize;
+}
+
+.mobile-nav-search {
+	position: relative;
+
+	.input-search {
+		width: 70%;
+	}
+
+	button {
+		height: auto;
+		width: 30%;
+
+		&:hover {
+			background-color: $color-jungle-green;
+		}
+	}
+
+	i {
+		color: $color-black;
+		left: 10px;
+		position: absolute;
+		top: 11px;
+	}
+
+	@media #{$breakpoint-desktop} {
+		display: none;
+	}
 }

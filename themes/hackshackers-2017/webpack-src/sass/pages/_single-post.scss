@@ -70,7 +70,6 @@
 		vertical-align: sub;
 
 		@media #{$breakpoint-mobile} {
-			height: 25px;
 			margin-bottom: 5px;
 		}
 	}
@@ -94,11 +93,12 @@
   50% { opacity: 0; }
 }
 
-article {
-	.single-headline {
-		&:after {
+.single-headline {
+	&:after {
+		@media #{$breakpoint-mobile} {
+			height: 28px;
 			margin-left: 17px;
-			margin-bottom: 7px;
+			margin-bottom: 5px;
 		}
 	}
 }
