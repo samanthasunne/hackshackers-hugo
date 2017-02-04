@@ -1,5 +1,7 @@
+/**
+ * Styles for specific pages, e.g. about/organizers.md -> .single-organizers
+ */
 .single-organizers {
-
 	figure {
 		float: left;
 		width: 50%;
@@ -11,5 +13,25 @@
 
 	figure {
 		margin: 0 $spacer-large $spacer-small 0;
+	}
+}
+
+.section-list {
+	margin-bottom: $spacer-medium;
+
+	li {
+		color: $color-blue;
+		display: inline;
+		font-weight: 700;
+
+		&:not(:last-of-type) {
+			padding-right: 13px;
+			margin-right: $spacer-small;
+			border-right: $border-primary;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
